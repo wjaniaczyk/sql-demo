@@ -23,7 +23,7 @@ public class CarService {
     }
 
     public List<Car> getAll() {
-        return carRepo.findAll();
+        return carRepo.getAllCars();
     }
 
     public List<Car> getByYear(int yearFrom, int yearTo) {
@@ -50,10 +50,6 @@ public class CarService {
             e.printStackTrace();
             return new ArrayList<>();
         }
-    }
-
-    public List<Car> getByBrand(String filter) {
-        return carRepo.getCarsByBrand(filter);
     }
 
     public List<Car> getByFilter(String filter) {
